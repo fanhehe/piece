@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${data.data.title}"></title>
+    <link rel = "stylesheet" href = "/static/style/theme/black.css">
+    <link rel = "stylesheet" href = "/static/style/common/common.css">
+    <link rel = "stylesheet" href = "/static/style/business/piece.css">
+</head>
+<body>
+    <section class = "piece-wrap">
+        <div class="piece-container">
+            <h2 class="piece-title" th:text="${data.data.title}"></h2>
+            <pre class="piece-code" th:text="${data.data.content}"></pre>
+            <div class="piece-control">
+                <div class="empty"></div>
+                <div class="piece-created-at"th:text="${data.data.createdAt}"></div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--<div th:replace="common/meta :: meta"></div>-->
+    <title>时间线</title>
+    <link rel = "stylesheet" href = "static/style/theme/black.css">
+    <link rel = "stylesheet" href = "static/style/common/common.css">
+    <link rel = "stylesheet" href = "static/style/business/timeline.css">
+</head>
+<body>
+    <main>
+        <section>
+            <div id = "time-line-entry-container" class = "entries">
+                <div class = "entry" th:each="item, stat : ${page.content}">
+                    <div class = "title" th:classappend = " ${stat.index % 3 == 0} ? 'big'" th:text="${item.title}">
+                    </div>
+                    <div class="body">
+                        <pre class = "content" th:text="${item.content}"></pre>
+                    </div>
+                    <div class="control">
+                        <span class = "control-time" th:text="${item.createdAt}"></span>
+                        <a th:href = "@{'/piece/' + ${item.id}}" class = "forword">前往</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script type = "application/javascript">
+    </script>
+    <script type = "module" src = "static/script/main/timeline/timeline.js"></script>
+</body>
+</html>

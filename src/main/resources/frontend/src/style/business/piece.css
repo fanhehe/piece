@@ -1,0 +1,45 @@
+.piece-wrap {
+    padding: 40px;
+    color: #FFFFFF;
+    background-color: #1d1e22;
+    box-shadow: 0 4px 30px rgba(0,0,0,.5);
+    width: 80%;
+    max-width: 720px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.piece-container {
+    padding: 20px 0;
+    /*background: #1d1e22;*/
+    /*box-shadow: 0 4px 30px rgba(0,0,0,.5);*/
+    /*border-radius: 6px;*/
+}
+
+.piece-title {
+    font-family: 'Telefon Black', sans-serif;
+}
+
+.piece-control {
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+.piece-control .piece-created-at {
+    order: 1;
+}
+
+.piece-container .piece-code {
+    overflow: hidden;
+    padding: 10px;
+    white-space: normal;
+    margin: 0;
+    word-break: break-all;
+    display: flex;
+    justify-content: center;
+}
